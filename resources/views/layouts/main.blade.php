@@ -25,7 +25,7 @@
                     <a href="#" class="hover:text-grey-300">TV Shows</a>
                 </li>
                 <li class="md:ml-6">
-                    <a href="#" class="hover:text-grey-300">Actors</a>
+                    <a href="{{route('actors.index')}}" class="hover:text-grey-300">Actors</a>
                 </li>
             </ul>
             <div class="flex items-center">
@@ -46,5 +46,6 @@
 @yield('content')
 
 @livewireScripts
+@yield('scripts')
 </body>
 </html>
