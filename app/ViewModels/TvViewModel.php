@@ -52,6 +52,6 @@ class TvViewModel extends ViewModel
                 'genres' =>$genresFormatted,
 
             ]);
-        })->dump();
+        });
     }
 }

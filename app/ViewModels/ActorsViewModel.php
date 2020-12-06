@@ -29,7 +29,7 @@ class ActorsViewModel extends ViewModel
             )->implode(', '),
 
 
-        ])->dump();
+        ]);
     });
     }
 

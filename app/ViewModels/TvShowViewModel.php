@@ -24,7 +24,7 @@ class TvShowViewModel extends ViewModel
             'cast1' =>\collect($this->tvshow['credits']['cast'])->take(4),
             'cast' =>\collect($this->tvshow['credits']['cast'])->take(5),
             'images' =>\collect($this->tvshow['images']['backdrops'])->take(9),
-        ])->dump();
+        ]);
     }
 
 

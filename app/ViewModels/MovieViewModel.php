@@ -24,7 +24,7 @@ class MovieViewModel extends ViewModel
             'cast1' =>\collect($this->movie['credits']['cast'])->take(4),
             'cast' =>\collect($this->movie['credits']['cast'])->take(5),
             'images' =>\collect($this->movie['images']['backdrops'])->take(9),
-        ])->dump();
+        ]);
     }
 
 
