@@ -16,16 +16,16 @@ class TvController extends Controller
      */
     public function index()
     {
-        $popularTv = Http::withToken(config('services.tmdb.token'))
+        $popularTv = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
                 ->get('https://api.themoviedb.org/3/tv/popular')
                 ->json()['results'];
         //dd($popularMovies);
 
-        $topRatedTv =  Http::withToken(config('services.tmdb.token'))
+        $topRatedTv = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
                 ->get('https://api.themoviedb.org/3/tv/top_rated')
                 ->json()['results'];
 
-        $genres =  Http::withToken(config('services.tmdb.token'))
+        $genres =Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
                 ->get('https://api.themoviedb.org/3/genre/tv/list')
                 ->json()['genres'];
         $viewModel = new TvViewModel(
@@ -67,7 +67,7 @@ class TvController extends Controller
     public function show($id)
     {
 
-        $tvshow = Http::withToken(config('services.tmdb.token'))
+        $tvshow =Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
                 ->get('https://api.themoviedb.org/3/tv/'.$id.'?append_to_response=credits,videos,images')
                 ->json();
         $viewModel = new TvShowViewModel(

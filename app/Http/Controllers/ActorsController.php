@@ -57,15 +57,15 @@ class ActorsController extends Controller
     public function show($id)
     {
         //
-        $actor = Http::withToken(config('services.tmdb.token'))
+        $actor = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
             ->get('https://api.themoviedb.org/3/person/'.$id)
             ->json();
 
-        $social = Http::withToken(config('services.tmdb.token'))
+        $social =Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
             ->get('https://api.themoviedb.org/3/person/'.$id.'/external_ids')
             ->json();
 
-        $credits = Http::withToken(config('services.tmdb.token'))
+        $credits =Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
             ->get('https://api.themoviedb.org/3/person/'.$id.'/combined_credits')
             ->json();
 
