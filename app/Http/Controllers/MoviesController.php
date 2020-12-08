@@ -80,7 +80,7 @@ class MoviesController extends Controller
     {
 
 
-        $movie = Http::withToken(config(''))
+        $movie =Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
                 ->get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images')
                 ->json();
         $viewModel = new MovieViewModel(
