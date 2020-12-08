@@ -16,7 +16,7 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        $popularMovies = Http::withToken('93d8faddc83600f29ccec55112c7afb8')
+        $popularMovies = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2Q4ZmFkZGM4MzYwMGYyOWNjZWM1NTExMmM3YWZiOCIsInN1YiI6IjVmYzIzZjcwMmJjZjY3MDAzZmJmNzQwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SqGRXpQo_THmUtoLRYYOO-euu6TCtM2XqJ6JVYY2CAI')
                                ->get('https://api.themoviedb.org/3/movie/popular')
                                ->json()['results'];
         //dd($popularMovies);
